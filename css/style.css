@@ -1,0 +1,194 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    border: 1px solid rgb(211, 30, 30);
+    height: 200vh;
+    position: relative;
+    min-width: 200px;
+}
+
+header{
+    background: url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png") no-repeat;
+    background-size: cover;
+    height: 500px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+/* ===========
+Navbar Left Section Start
+============== */
+
+nav{
+    background: transparent;
+    /* height: 170px; */
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.nav_left_section{
+     display: flex; 
+     flex: 0.2;
+     align-items: center;
+}
+
+.nav_left_section button{
+    display: flex;
+    align-items: center;
+    padding: 0.3em 0.4em;
+    margin-left: 0.7em;
+    background-color: #1bb76e;
+    color: #fff;
+    border: 1px solid #1bb76e;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    /* height: 100%;; */
+    min-width: fit-content;
+}
+
+.nav_left_section button:hover{
+    background-color: #2fca82;
+    /* padding-top: 0.5em; */
+    cursor: pointer;
+}
+
+/* ===========
+Navbar Left Section End
+============== */
+
+
+/* ===========
+Navbar Search Section Start
+============== */
+
+.searchBar{
+    display: flex;
+    align-items: center;
+    /* flex: 0.1; */
+    background: hsla(0,0%,100%,.25);
+    height: 2vw;
+    border-radius: 3px;
+}
+
+.searchBar input{
+    padding:0.2em 1em ;
+    background-color: transparent;
+    width: 25vw;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.searchBar button{
+    background: transparent;
+    border: none;
+    margin-right: 0.5vw;
+    cursor: pointer;
+}
+
+/* ===========
+Navbar Search Section End
+============== */
+
+/* ===========
+Navbar Right Section Start
+============== */
+
+.nav_right_section{
+   display: flex;
+   align-items: center;
+   /* flex: 0.2; */
+}
+
+.nav_right_section button{
+    margin-right: 1em;
+}
+
+.nav_right_section #notificationBtn{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav_right_section #addFreeBtn,#signUpBtn , #signInBtn{
+    display: flex;
+    align-items: center;
+    padding: 0.3em 0.4em;
+    margin-left: 0.7em;
+    background-color: #6432f9;
+    border: 1px solid #6432f9;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 700;
+    /* height: 100%;; */
+    min-width: fit-content;
+} 
+
+
+.nav_right_section #addFreeBtn a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.nav_right_section #signInBtn{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.nav_right_section #signInBtn a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+
+.nav_right_section #signUpBtn{
+    background-color: #1bb76e;
+    border: 1px solid #1bb76e;
+}
+
+.nav_right_section #signUpBtn a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+/* ===========
+Navbar Right Section End
+============== */
+
+
+.nav_heading{
+    margin-top: 10vw;
+}
+
+.tagsHeading{
+    background-color: aqua;
+    height: 70px;
+}
+
+.filterContainer{
+    background-color: violet;
+    height: 40px;
+}
+
+section{
+    width: 70%;
+    background-color: rgb(87, 59, 6);
+    margin: 1em auto;
+    height: 500px;
+}
