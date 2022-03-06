@@ -21,7 +21,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    position: absolute;
+    position: relative;
 }
 
 /* ===========
@@ -37,6 +37,8 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 1em;
+    background: url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png") no-repeat;
+    background-size: cover;
 }
 
 
@@ -278,13 +280,44 @@ Tags Container End
 
 
 .filterContainer{
-    background-color: violet;
+    border: 1px solid aqua;
     height: 40px;
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 8em;
 }
 
+.filterOptions{
+    display:  flex;
+    align-items: center;
+}
+
+.marginRight{
+    margin-right: 1em;
+}
+
+.waterfall{
+    color: #fff;
+}
+
+.contentController> img , .contentController>svg{
+    cursor: pointer;
+}
+
+
+/* ===============
+Section Start 
+=================== */
 section{
     width: 70%;
     background-color: rgb(87, 59, 6);
     margin: 1em auto;
     height: 500px;
+    position: relative;
+    top: -70px;
 }

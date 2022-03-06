@@ -18,6 +18,7 @@ window.addEventListener("scroll",()=>{
         document.querySelector(".filterContainer").style.top = "0px";
     }else{
         document.querySelector(".filterContainer").style.position = "static";
+        document.querySelector(".filterContainer").style.width = "85%";
     }
     
 })
