@@ -245,7 +245,33 @@ Tags Container
     max-height: 6em;
     border: 1px solid aqua;
     margin: 0.3em;
+    position: relative;
 }
+
+.Tag-title{
+    position:absolute;
+    bottom:0px;
+    left: 0;
+    right: 0;
+    padding: 0.3em 1em;
+}
+
+.Tag-name{
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+.Tag-posts{
+    color: hsla(0,0%,100%,.5);
+    font-size: 0.65rem;
+    text-align: center;
+}
+/* =============
+Tags Container End
+=================== */
 
 
 .filterContainer{
