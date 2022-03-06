@@ -24,14 +24,21 @@ window.addEventListener("scroll",()=>{
 
 //toggle button 
 
-let toggleFlag = true;
+let toggleFlag = false;
+// let addBtnToggle = fase
 document.querySelector(".moreTagBtn").addEventListener("click",()=>{
 
     if(toggleFlag){
-        document.querySelector("header").style.height = "600px"
+        document.querySelector("header").style.height = "340px"
+        document.querySelector(".tagContainer").style.height = "110px"
+        document.querySelector(".addToggle").innerHTML = "+";
         toggleFlag = false;
+        
     }else{
-        document.querySelector("header").style.height = "200px"
+        document.querySelector("header").style.height = "650px"
+        document.querySelector(".tagContainer").style.height = "440px"
+        document.querySelector(".addToggle").innerHTML = "x";
         toggleFlag = true;
+        // addBtnToggle = true;
     }
 })

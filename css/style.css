@@ -17,7 +17,7 @@
 header{
     background: url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png") no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 340px;
     top: 0;
     left: 0;
     right: 0;
@@ -204,6 +204,7 @@ Tag Heading
     align-items: center;
     margin: 0 auto;
     justify-content: space-between;
+    padding: 0 1.4em;
 }
 
 .tagsHeading button{
@@ -233,6 +234,8 @@ Tags Container
     width: 85%;
     border: 1px solid aqua;
     margin: 0 auto;
+    overflow: hidden;
+    height: 110px;
 }
 
 .TrendingTags-container{
