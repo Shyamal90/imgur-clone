@@ -3,7 +3,7 @@
 window.addEventListener("scroll",()=>{
     const scrolled = window.scrollY;
 
-    console.log(scrolled);
+    // console.log(scrolled);
 
     if(scrolled > 290){
         document.querySelector("nav").style.display = "none";
