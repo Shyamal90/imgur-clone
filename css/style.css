@@ -315,10 +315,68 @@ Tags Container End
 Section Start 
 =================== */
 section{
+    background-color: #2E3035;
+    position: relative;
+    top: -16px;
+}
+
+.postsContainer{
     width: 70%;
-    background-color: rgb(87, 59, 6);
+    background-color: #2E3035;
     margin: 1em auto;
-    height: 500px;
+    /* height: 500px; */
     position: relative;
     top: -70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    left: 0;
+    right: 0;
+}
+
+.cartImgContainer{
+    height: 210px;
+    border: 1px solid red;
+    overflow: hidden;
+}
+
+section img{
+    width: 100%;
+    /* height: 180px; */
+    object-fit: contain;
+}
+
+section .cartContainer{
+    height: 240px;
+    width: 240px;
+    border: 1px solid aqua;
+    margin: 0.4em;
+}
+
+.cartDetail{
+    display: flex;
+    flex-direction: column;
+    background-color: #474A51;
+}
+
+.reaction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reaction>svg{
+    fill:#cad0d8;
+}
+
+.likeDislike{
+    display: flex;
+}
+
+.comment{
+    display: flex;
+}
+
+.views{
+    display: flex;
 }
