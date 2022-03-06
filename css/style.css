@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-family: 'Praise', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -35,6 +38,7 @@ nav{
     justify-content: space-between;
     padding: 1em;
 }
+
 
 .nav_left_section{
      display: flex; 
@@ -79,6 +83,8 @@ Navbar Search Section Start
     background: hsla(0,0%,100%,.25);
     height: 2vw;
     border-radius: 3px;
+    position: relative;
+    left: 3.5%;
 }
 
 .searchBar input{
@@ -88,6 +94,7 @@ Navbar Search Section Start
     border: none;
     outline: none;
     color: #fff;
+   
 }
 
 .searchBar button{
@@ -173,13 +180,73 @@ Navbar Right Section End
 
 
 .nav_heading{
-    margin-top: 10vw;
+    margin-top: 3.5em;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    font-size: 1vw;
+    position: relative;
+    /* top: 3.5em; */
+    color: #aed8ea;
+    letter-spacing: .6px;
+    border: 1px solid aqua;
 }
 
+
+/* ==============
+Tag Heading
+================= */
 .tagsHeading{
-    background-color: aqua;
+    border:1px solid aqua;
     height: 70px;
+    display: flex;
+    width: 85%;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
 }
+
+.tagsHeading button{
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    /* padding-bottom: 0.5em; */
+}
+
+
+/* ================
+Tag Heading End
+==================== */
+
+/* =========================
+Tags Container
+============================ */
+
+.tagContainer{
+    width: 85%;
+    border: 1px solid aqua;
+    margin: 0 auto;
+}
+
+.TrendingTags-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.TrendingTags-container .Tag{
+    max-height: 6em;
+    border: 1px solid aqua;
+    margin: 0.3em;
+}
+
 
 .filterContainer{
     background-color: violet;
