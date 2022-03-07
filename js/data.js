@@ -104,7 +104,7 @@ const showFilterData = (data) => {
         console.log("tags:", result.data.items);
         filterResult = [];
         displayData(data);
-
+        document.querySelector(".showSearchResult").style.display = "none"
       })
       .catch((error) => console.log("error", error));
 
