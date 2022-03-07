@@ -14,7 +14,22 @@ window.addEventListener("scroll",()=>{
 
 
     if(toggleFlag === false){
-        if(scrolled > 305){
+        if(scrolled > 295){
+            document.querySelector(".filterContainer").style.position = "fixed";
+            document.querySelector(".filterContainer").style.width = "100%";
+            document.querySelector(".filterContainer").style.top = "0px";
+            document.querySelector(".showSearchBar").style.visibility = "visible";
+            document.querySelector(".hiddleLogo").style.visibility = "visible"
+            // document.querySelector(".hiddleLogo").style.marginRight = "12em"
+        }else{
+            document.querySelector(".filterContainer").style.position = "static";
+            document.querySelector(".filterContainer").style.width = "85%";
+            document.querySelector(".showSearchBar").style.visibility = "hidden";
+            document.querySelector(".filterContainer").style.background = 'url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png")'
+            document.querySelector(".hiddleLogo").style.visibility = "hidden"
+        }
+    }else{
+        if(scrolled > 615){
             document.querySelector(".filterContainer").style.position = "fixed";
             document.querySelector(".filterContainer").style.width = "100%";
             document.querySelector(".filterContainer").style.top = "0px";
