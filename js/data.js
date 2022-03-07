@@ -23,7 +23,7 @@ const displayData = (data) => {
   console.log(data);
 
   
-  data.map((item) => {
+  data.map((item,index) => {
   
     //create cart container 
     let cartContainer = document.createElement("div");
@@ -35,12 +35,25 @@ const displayData = (data) => {
 
     //create image tag
     let img = document.createElement("img");
+    //create video tag
+    let video = document.createElement("video");
 
-    if(item.mp4){
 
+    if(item.images){
+      
+      // console.log(item.images[0].link)
+      if(item.mp4 !== undefined){
+        img.setAttribute("src",item.images[0].link);
+      }else{
+        console.log(index,item.images[0].mp4);
+        video.innerHTML = `<source src=${item.images[0].mp4} type="video/mp4">`
+      }
+      
+    }if(item.mp4){
+       video.innerHTML = `<source src=${item.mp4} type="video/mp4">`
     }else{
        
-        img.setAttribute("src","https://images.pexels.com/photos/9359330/pexels-photo-9359330.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+        img.setAttribute("src",item.link);
         img.setAttribute("alt","post_image");
     }
    
@@ -51,7 +64,7 @@ const displayData = (data) => {
 
 
     //create div for title
-    let title = document.createElement("title");
+    let title = document.createElement("div");
     title.setAttribute("class","title");
 
     //create p tag for title element
@@ -106,7 +119,7 @@ const displayData = (data) => {
 
 
     //append in cart image container
-    cartImgContainer.append(img)
+    cartImgContainer.append(img,video)
 
     // append in cartContainer
     cartContainer.append(cartImgContainer,cartDetail);

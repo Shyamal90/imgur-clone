@@ -282,7 +282,7 @@ Tags Container End
 
 .filterContainer{
     border: 1px solid aqua;
-    height: 40px;
+    height: 60px;
     width: 85%;
     margin: 0 auto;
     position: relative;
@@ -291,6 +291,12 @@ Tags Container End
     display: flex;
     justify-content: space-between;
     padding: 0.5em 8em;
+    align-items: center;
+}
+
+.filterContainer .searchBar{
+    visibility: hidden;
+    /* visibility: visible; */
 }
 
 .filterOptions{
@@ -310,14 +316,16 @@ Tags Container End
     cursor: pointer;
 }
 
-
+.mostViral{
+    margin-top: 1.3em;
+}
 /* ===============
 Section Start 
 =================== */
 section{
     background-color: #2E3035;
     position: relative;
-    top: -16px;
+    top: -8px;
 }
 
 .postsContainer{
@@ -335,7 +343,7 @@ section{
 }
 
 .cartImgContainer{
-    height: 210px;
+    height: 60%;
     border: 1px solid red;
     overflow: hidden;
 }
@@ -357,12 +365,29 @@ section .cartContainer{
     display: flex;
     flex-direction: column;
     background-color: #474A51;
+    height: 40%;
+    padding: 0.5em;
+    position: relative;
+}
+
+.cartDetail .title{
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid aqua;
+    height: 70%;
+    overflow: hidden;
 }
 
 .reaction{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    bottom: 0px;
+    margin-top: 0.4em;
+    color: lightgray;
+    font-weight: 600;
+    font-size: 0.8rem;
 }
 
 .reaction>svg{

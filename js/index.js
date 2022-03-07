@@ -1,4 +1,5 @@
 
+let toggleFlag = false;
 
 window.addEventListener("scroll",()=>{
     const scrolled = window.scrollY;
@@ -12,20 +13,26 @@ window.addEventListener("scroll",()=>{
     }
 
 
-    if(scrolled > 305){
-        document.querySelector(".filterContainer").style.position = "fixed";
-        document.querySelector(".filterContainer").style.width = "100%";
-        document.querySelector(".filterContainer").style.top = "0px";
-    }else{
-        document.querySelector(".filterContainer").style.position = "static";
-        document.querySelector(".filterContainer").style.width = "85%";
+    if(toggleFlag === false){
+        if(scrolled > 305){
+            document.querySelector(".filterContainer").style.position = "fixed";
+            document.querySelector(".filterContainer").style.width = "100%";
+            document.querySelector(".filterContainer").style.top = "0px";
+            document.querySelector(".showSearchBar").style.visibility = "visible";
+        }else{
+            document.querySelector(".filterContainer").style.position = "static";
+            document.querySelector(".filterContainer").style.width = "85%";
+            document.querySelector(".showSearchBar").style.visibility = "hidden";
+            document.querySelector(".filterContainer").style.background = 'url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png")'
+        }
     }
+    
     
 })
 
 //toggle button 
 
-let toggleFlag = false;
+
 // let addBtnToggle = fase
 document.querySelector(".moreTagBtn").addEventListener("click",()=>{
 
