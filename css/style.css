@@ -217,7 +217,7 @@ Navbar Right Section End
     text-align: center;
     font-size: 1vw;
     position: relative;
-    top: 3.5em;
+    /* top: 3.5em; */
     color: #aed8ea;
     letter-spacing: .6px;
     /* border: 1px solid aqua; */
