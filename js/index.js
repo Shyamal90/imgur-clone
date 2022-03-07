@@ -19,14 +19,16 @@ window.addEventListener("scroll", () => {
             document.querySelector(".filterContainer").style.width = "100%";
             document.querySelector(".filterContainer").style.top = "0px";
             document.querySelector(".showSearchBar").style.visibility = "visible";
-            document.querySelector(".hiddleLogo").style.display = "block"
+            document.querySelector(".addLogo").style.display = "block"
+            document.querySelector(".filterContainer").style.background = 'url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png")'
             // document.querySelector(".hiddleLogo").style.marginRight = "12em"
         } else {
             document.querySelector(".filterContainer").style.position = "static";
             document.querySelector(".filterContainer").style.width = "85%";
             document.querySelector(".showSearchBar").style.visibility = "hidden";
-            document.querySelector(".filterContainer").style.background = 'url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png")'
-            document.querySelector(".hiddleLogo").style.display = "none";
+            // document.querySelector(".filterContainer").style.background = 'url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png")'
+            document.querySelector(".filterContainer").style.background = 'transparent'
+            document.querySelector(".addLogo").style.display = "none";
         }
     } else {
         if (scrolled > 615) {
@@ -34,13 +36,14 @@ window.addEventListener("scroll", () => {
             document.querySelector(".filterContainer").style.width = "100%";
             document.querySelector(".filterContainer").style.top = "0px";
             document.querySelector(".showSearchBar").style.visibility = "visible";
-            document.querySelector(".hiddleLogo").style.display = "block"
+            document.querySelector(".addLogo").style.display = "block"
+            document.querySelector(".filterContainer").style.background = 'url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png")'
         } else {
             document.querySelector(".filterContainer").style.position = "static";
             document.querySelector(".filterContainer").style.width = "85%";
             document.querySelector(".showSearchBar").style.visibility = "hidden";
-            document.querySelector(".filterContainer").style.background = 'url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png")'
-            document.querySelector(".hiddleLogo").style.display = "none";
+            document.querySelector(".filterContainer").style.background = 'transparent'
+            document.querySelector(".addLogo").style.display = "none";
         }
     }
 

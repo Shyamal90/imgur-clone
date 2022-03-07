@@ -323,6 +323,10 @@ Tags Container End
     align-items: center;
 }
 
+.addLogo{
+    display: none;
+}
+
 .filterContainer .searchBar{
     visibility: hidden;
     /* visibility: visible; */
@@ -361,7 +365,7 @@ Section Start
 section{
     background-color: #2E3035;
     position: relative;
-    top: -16px;
+    top: -20px;
 }
 
 .postsContainer{
