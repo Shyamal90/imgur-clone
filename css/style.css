@@ -18,7 +18,7 @@ header{
     background: url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png") no-repeat;
     background-size: cover;
     height: 340px;
-    top: 0;
+    top: -3px;
     left: 0;
     right: 0;
     position: relative;
