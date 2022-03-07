@@ -19,9 +19,128 @@ fetch("https://api.imgur.com/3/gallery/random", requestOptions)
   }).catch(error => console.log('error', error));
 
 
-const displayData = (data) => {
-  console.log(data);
 
+
+
+
+
+  /*======================================================================================
+  It's for debounding
+  ======================================================================================= */
+
+
+  let tags = [];
+  //store tags
+  fetch("https://api.imgur.com/3/tags", requestOptions)
+  .then(response => response.json())
+  .then((result) => {
+    tags = [...result.data.tags];
+    console.log("tags",tags)
+    // displayData(result.data);
+  }).catch(error => console.log('error', error));
+
+
+
+let inputField = document.querySelector(".searchBox");
+
+
+//when even user types on input we called API.
+inputField.addEventListener("input", () => getQuery(inputField.value));
+
+
+//declare getQuery function
+const getQuery = (searchQuery) => {
+    
+
+    if(searchQuery.length === 0){
+      document.querySelector(".showSearchResult").style.display = "none"
+    }else{
+      getData(searchQuery)
+      document.querySelector(".showSearchResult").style.display = "block"
+    }
+    
+
+
+}
+
+
+//get data based on query
+const getData = async (query) => {
+    
+  let filterResult = tags.filter((tag)=>{
+       let reg = new RegExp(`^${query}`,'gi');
+       return tag.name.match(reg);
+  })
+
+  console.log(filterResult);
+  if(query.length === 0){
+    filterResult = [];
+  }
+    // let filterResult =  
+    // new RegExp(`${query}`,'gi');
+   showFilterData(filterResult);
+
+  
+}
+
+
+
+const showFilterData = (data) => {
+  document.querySelector(".showSearchResult").innerHTML = "";
+  // console.log(data);
+   data.map((tag)=>{
+     let tagEl = document.createElement("p");
+     tagEl.setAttribute("class","searchItem");
+     tagEl.innerHTML = tag.name;
+
+    //  Click the element
+    tagEl.addEventListener("click",()=>{
+      let tag = tagEl.innerHTML;
+
+      fetch(`https://api.imgur.com/3/gallery/t/${tag}`, requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        let data = result.data.items;
+        console.log("tags:", result.data.items);
+        filterResult = [];
+        displayData(data);
+
+      })
+      .catch((error) => console.log("error", error));
+
+
+    })
+
+     document.querySelector(".showSearchResult").append(tagEl);
+   })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*======================================================================
+                 It's for display data in main section
+  ========================================================================= */
+
+const displayData = (data) => {
+  // console.log(data);
+  document.querySelector(".postsContainer").innerHTML = "";
   
   data.map((item,index) => {
   
@@ -45,7 +164,7 @@ const displayData = (data) => {
       if(item.mp4 !== undefined){
         img.setAttribute("src",item.images[0].link);
       }else{
-        console.log(index,item.images[0].mp4);
+        // console.log(index,item.images[0].mp4);
         video.innerHTML = `<source src=${item.images[0].mp4} type="video/mp4">`
       }
       

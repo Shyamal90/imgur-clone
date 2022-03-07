@@ -1,67 +1,76 @@
 
 let toggleFlag = false;
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
     const scrolled = window.scrollY;
 
     // console.log(scrolled);
 
-    if(scrolled > 290){
+    if (scrolled > 290) {
         document.querySelector("nav").style.display = "none";
-    }else{
+    } else {
         document.querySelector("nav").style.display = "flex";
     }
 
 
-    if(toggleFlag === false){
-        if(scrolled > 295){
+    if (toggleFlag === false) {
+        if (scrolled > 295) {
             document.querySelector(".filterContainer").style.position = "fixed";
             document.querySelector(".filterContainer").style.width = "100%";
             document.querySelector(".filterContainer").style.top = "0px";
             document.querySelector(".showSearchBar").style.visibility = "visible";
-            document.querySelector(".hiddleLogo").style.visibility = "visible"
+            document.querySelector(".hiddleLogo").style.display = "block"
             // document.querySelector(".hiddleLogo").style.marginRight = "12em"
-        }else{
+        } else {
             document.querySelector(".filterContainer").style.position = "static";
             document.querySelector(".filterContainer").style.width = "85%";
             document.querySelector(".showSearchBar").style.visibility = "hidden";
             document.querySelector(".filterContainer").style.background = 'url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png")'
-            document.querySelector(".hiddleLogo").style.visibility = "hidden"
+            document.querySelector(".hiddleLogo").style.display = "none";
         }
-    }else{
-        if(scrolled > 615){
+    } else {
+        if (scrolled > 615) {
             document.querySelector(".filterContainer").style.position = "fixed";
             document.querySelector(".filterContainer").style.width = "100%";
             document.querySelector(".filterContainer").style.top = "0px";
             document.querySelector(".showSearchBar").style.visibility = "visible";
-        }else{
+            document.querySelector(".hiddleLogo").style.display = "block"
+        } else {
             document.querySelector(".filterContainer").style.position = "static";
             document.querySelector(".filterContainer").style.width = "85%";
             document.querySelector(".showSearchBar").style.visibility = "hidden";
             document.querySelector(".filterContainer").style.background = 'url("https://s.imgur.com/desktop-assets/desktop-assets/homebg.e52b5cdf24f83bcd55f9f1318855f2ef.png")'
+            document.querySelector(".hiddleLogo").style.display = "none";
         }
     }
-    
-    
+
+
 })
 
 //toggle button 
 
 
 // let addBtnToggle = fase
-document.querySelector(".moreTagBtn").addEventListener("click",()=>{
+document.querySelector(".moreTagBtn").addEventListener("click", () => {
 
-    if(toggleFlag){
+    if (toggleFlag) {
         document.querySelector("header").style.height = "340px"
         document.querySelector(".tagContainer").style.height = "110px"
         document.querySelector(".addToggle").innerHTML = "+";
         toggleFlag = false;
-        
-    }else{
+
+    } else {
         document.querySelector("header").style.height = "650px"
         document.querySelector(".tagContainer").style.height = "440px"
+        document.querySelector(".tagContainer").style.paddingBottom = "2em"
         document.querySelector(".addToggle").innerHTML = "x";
         toggleFlag = true;
         // addBtnToggle = true;
     }
 })
+
+
+/*===============================================================
+                 Debouncing & Show Result
+================================================================= */
+

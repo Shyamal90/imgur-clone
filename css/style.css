@@ -78,6 +78,34 @@ Navbar Left Section End
 /* ===========
 Navbar Search Section Start
 ============== */
+.inputContainer{
+   /* border: 1px solid red; */
+   position: relative;
+}
+
+.showSearchResult{
+    /* border: 1px solid aqua; */
+    position: absolute;
+    width: 100%;
+    background-color: #474A51;
+    /* height: 400px; */
+    z-index: 1200;
+    /* top: 0.3em; */
+    left: 1em;
+    margin-top: 0.2em;
+    padding: 0.3em 0.5em;
+    display: none;
+}
+
+.searchItem{
+    /* border: 1px solid aqua; */
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    margin: 0.3em 0em;
+    cursor: pointer;
+}
+
 
 .searchBar{
     display: flex;
@@ -183,7 +211,7 @@ Navbar Right Section End
 
 
 .nav_heading{
-    margin-top: 3.5em;
+    margin-top: 3.8em;
     color: #fff;
     font-weight: 700;
     text-align: center;
@@ -193,6 +221,7 @@ Navbar Right Section End
     color: #aed8ea;
     letter-spacing: .6px;
     border: 1px solid aqua;
+    margin-right: 3em;
 }
 
 
@@ -320,10 +349,11 @@ Tags Container End
     /* margin-top: 1.3em; */
     display: flex;
     align-items: center;
+    font-size: 1.2vw;
 }
 
 .mostViral img{
-    visibility: hidden;
+    display: none;
 }
 /* ===============
 Section Start 
