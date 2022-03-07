@@ -105,6 +105,8 @@ const showFilterData = (data) => {
         filterResult = [];
         displayData(data);
         document.querySelector(".showSearchResult").style.display = "none"
+        inputField.value= "";
+
       })
       .catch((error) => console.log("error", error));
 
