@@ -56,7 +56,7 @@ nav{
     margin-left: 0.7em;
     background-color: #1bb76e;
     color: #fff;
-    border: 1px solid #1bb76e;
+    /* border: 1px solid #1bb76e; */
     border-radius: 3px;
     font-size: 0.85rem;
     font-weight: 700;
@@ -220,7 +220,7 @@ Navbar Right Section End
     /* top: 3.5em; */
     color: #aed8ea;
     letter-spacing: .6px;
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
     margin-right: 3em;
 }
 
@@ -229,7 +229,7 @@ Navbar Right Section End
 Tag Heading
 ================= */
 .tagsHeading{
-    border:1px solid aqua;
+    /* border:1px solid aqua; */
     height: 70px;
     display: flex;
     width: 85%;
@@ -264,7 +264,7 @@ Tags Container
 
 .tagContainer{
     width: 85%;
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
     margin: 0 auto;
     overflow: hidden;
     height: 110px;
@@ -278,7 +278,7 @@ Tags Container
 
 .TrendingTags-container .Tag{
     max-height: 6em;
-    border: 1px solid aqua;
+    border: 1px solid rgb(7, 75, 75);
     margin: 0.3em;
     position: relative;
 }
@@ -310,7 +310,7 @@ Tags Container End
 
 
 .filterContainer{
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
     height: 60px;
     width: 85%;
     margin: 0 auto;
@@ -380,7 +380,7 @@ section{
 
 .cartImgContainer{
     height: 60%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     overflow: hidden;
 }
 
@@ -393,7 +393,7 @@ section img{
 section .cartContainer{
     height: 240px;
     width: 240px;
-    border: 1px solid aqua;
+    border: 1px solid rgb(9, 80, 80);
     margin: 0.4em;
 }
 
@@ -409,7 +409,7 @@ section .cartContainer{
 .cartDetail .title{
     font-weight: 700;
     color: #fff;
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
     height: 70%;
     overflow: hidden;
 }
